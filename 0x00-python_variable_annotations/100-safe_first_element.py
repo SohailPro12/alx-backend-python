@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 # The types of the elements of the input are not know
+"""
+safe_first_element functions
+"""
 
 from typing import Sequence, Any, Union
 
