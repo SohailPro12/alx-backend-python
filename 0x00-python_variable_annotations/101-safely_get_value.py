@@ -10,7 +10,7 @@ r = Union[Any, T]
 d = Union[T, None]
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Any = None) -> Any:
+def safely_get_value(dct: Mapping, key: Any, default: d = None) -> r:
     """
     Safely retrieves the value associated with the given key
     from the dictionary.
