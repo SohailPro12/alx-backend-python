@@ -10,5 +10,5 @@ async_generator = __import__('0-async_generator').async_generator
 
 
 async def async_comprehension() -> Generator[float, None, None]:
-    result = [number async for number in async_generator]
+    result = [number async for number in async_generator()]
     return result
