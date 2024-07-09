@@ -8,6 +8,9 @@ import random
 
 
 async def async_generator() -> AsyncGenerator[int, None]:
-    for i in range(0, 10):
+    """
+    Async Generator function
+    """
+    for _ in range(0, 10):
         await asyncio.sleep(1)
         yield random.random() * 10
