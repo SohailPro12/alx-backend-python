@@ -3,8 +3,9 @@
 Parameterize a unit test
 """
 
-from parameterized import parameterized
 import unittest
+from parameterized import parameterized
+from utils import access_nested_map
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -13,8 +14,9 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-    def test_add(self, name, a, b, expected):
-        self.assertEqual(a + b, expected)
+    def test(self, nested_map, path, expected_result):
+            result = access_nested_map(nested_map, path)
+            self.assertEqual(result, expected_result)
 
 
 if __name__ == '__main__':
